@@ -725,6 +725,8 @@ class TestPfcwdFunc(SetupPfcwdFunc):
 
         extra_pfc_storm_timeout_needed = dut.facts['asic_type'] in ["mellanox", "cisco-8000"]
         if extra_pfc_storm_timeout_needed:
+        extra_pfc_storm_timeout_needed = dut.facts['asic_type'] in ["mellanox", "cisco-8000"]
+        if extra_pfc_storm_timeout_needed:
             PFC_STORM_TIMEOUT = 30
             pfcwd_stats_before_test = check_pfc_storm_state(dut, port, self.storm_hndle.pfc_queue_idx)
 
